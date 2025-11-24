@@ -23,9 +23,14 @@ with st.expander("Data"):
   y
 
 with st.expander("Data Visualizations"):
+  df3 = df1[df1['Age Class'] == 'Adult']
+  len(df3)
+  st.write("I have filtered out the data to be only adults to simplify the processes, and as you can see there are only 510 out of a thousand in the dataset which are adults")
+  df3.head()
+  
   
   fig, ax = plt.subplots(figsize=(10, 10))
   plt.title("Length to weight ratio")
-  sns.scatterplot(data = df1, x = 'Observed Length (m)', y = 'Observed Weight (kg)',hue = 'Common Name')
+  sns.scatterplot(data = df3, x = 'Observed Length (m)', y = 'Observed Weight (kg)',hue = 'Common Name')
   plt.legend()
   st.pyplot(fig)
