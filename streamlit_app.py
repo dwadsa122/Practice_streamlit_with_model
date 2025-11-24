@@ -68,12 +68,12 @@ with st.sidebar:
        'Small Streams', 'Swamps', 'Tidal Rivers'))
 
 # Create dataframe from input features
-  data = {'Observed_Length (m)': observed_length,
-          'Observed_Weight (kg)': observed_weight,
-          'Age_Class': Age_class,
+  data = {'Observed Length (m)': observed_length,
+          'Observed Weight (kg)': observed_weight,
+          'Age Class': Age_class,
           'Sex': Sex,
           'Country/Region': Region,
-          'Habitat': Habitat}
+          'Habitat Type': Habitat}
   input_df = pd.DataFrame(data, index = [0])
   input_croc = pd.concat([input_df.head(1), X], axis = 0 , ignore_index=True)
 with st.expander('Input Features Dataframe'):
