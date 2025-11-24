@@ -34,3 +34,8 @@ with st.expander("Data Visualizations"):
   sns.scatterplot(data = df3, x = 'Observed Length (m)', y = 'Observed Weight (kg)',hue = 'Common Name')
   plt.legend()
   st.pyplot(fig)
+
+with st.sidebar:
+  st.header("Input Features")
+  observed_length = st.slider('Observed length (m)', 0.14,6.12)
+  observed_weight = st.slider('Observed weight (kg)', 4.4, 1139.7)
