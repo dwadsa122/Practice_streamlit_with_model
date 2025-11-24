@@ -75,7 +75,7 @@ with st.sidebar:
           'Country/Region': Region,
           'Habitat': Habitat}
   input_df = pd.DataFrame(data = data, index = [0])
-  input_croc = pd.concat([input_df, X], axis = 0 ]
+  input_croc = pd.concat([input_df, X], axis = 0 )
        
       
 
