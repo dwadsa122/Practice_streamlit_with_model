@@ -7,6 +7,14 @@ st.title('Practice Tool (Streamlit with machine learning')
 
 st.write('This is my attempt to create a streamlit app with a machine learning model inside.')
 
+st.markdown("""
+<style>
+div.streamlit-expander {
+    width: 900px !important;
+}
+</style>
+""", unsafe_allow_html=True)
+
 with st.expander("Data"):
   st.write('**Raw Data**')
   df = pd.read_csv("crocodile_dataset.csv")
