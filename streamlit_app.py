@@ -10,6 +10,7 @@ with st.expander("Data"):
   st.write('**Raw Data**')
   df = pd.read_csv("crocodile_dataset.csv")
   st.write("It is important to note that there are various classifications in the common name column, lets remove some columns that seem to be unnecessary, and we'll only keep those that we need.")
-  df_new = df.drop(columns = df[['Observation ID','Scientific Name','Genus','Genus','Conservation Status', 'Observer Name', 'Notes','Family','Date of Observation']])
-  df_new
-  
+  X = df.drop(columns = df[['Observation ID','Scientific Name','Genus','Genus','Conservation Status', 'Observer Name', 'Notes','Family','Date of Observation', 'Common Name']])
+  X
+  y = df['Common Name']
+  y
