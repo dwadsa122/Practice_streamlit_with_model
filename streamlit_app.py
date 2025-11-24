@@ -74,7 +74,7 @@ with st.sidebar:
           'Sex': Sex,
           'Country/Region': Region,
           'Habitat': Habitat}
-  input_df = pd.DataFrame(data = data, index = [0])
+  input_df = pd.DataFrame(data, index = [0])
   input_croc = pd.concat([input_df, X], axis = 0 )
 with st.expander('Input Features Dataframe'):
   st.write("Here are the your input features")
