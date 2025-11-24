@@ -39,3 +39,28 @@ with st.sidebar:
   st.header("Input Features")
   observed_length = st.slider('Observed length (m)', 0.14,6.12)
   observed_weight = st.slider('Observed weight (kg)', 4.4, 1139.7)
+  Age_class = st.selectbox('Age Class', ('Adult', 'SubAdult', 'Juvenile', 'Hatchling'))
+  Sex = st.selectbox('Sex', ('Male','Female','Unknown'))
+  Region = st.selectbox('Country/Region', ('Australia', 'Belize', 'Cambodia', 'Cameroon',
+       'Central African Republic', 'Chad', 'Colombia', 'Congo (DRC)',
+       'Congo Basin Countries', 'Costa Rica', 'Cuba', "Côte d'Ivoire",
+       'Egypt', 'Gabon', 'Ghana', 'Guatemala', 'Guinea', 'India',
+       'Indonesia', 'Indonesia (Borneo)', 'Indonesia (Papua)',
+       'Iran (historic)', 'Kenya', 'Laos', 'Liberia', 'Malaysia',
+       'Malaysia (Borneo)', 'Mali', 'Mauritania', 'Mexico', 'Nepal',
+       'Niger', 'Nigeria', 'Pakistan', 'Papua New Guinea', 'Philippines',
+       'Senegal', 'Sierra Leone', 'South Africa', 'Sri Lanka', 'Sudan',
+       'Tanzania', 'Thailand', 'USA (Florida)', 'Uganda', 'Venezuela',
+       'Vietnam'))
+  Habitat = st.selectbox('Describe it's Habitat', ('Billabongs', 'Brackish Rivers', 'Coastal Lagoons',
+       'Coastal Wetlands', 'Estuaries', 'Estuarine Systems',
+       'Flooded Savannas', 'Forest Rivers', 'Forest Swamps',
+       'Freshwater Marshes', 'Freshwater Rivers', 'Freshwater Wetlands',
+       'Gorges', 'Lagoons', 'Lakes', 'Large Rivers', 'Mangroves',
+       'Marshes', 'Oases', 'Oxbow Lakes', 'Ponds', 'Reservoirs', 'Rivers',
+       'Shaded Forest Rivers', 'Slow Rivers', 'Slow Streams',
+       'Small Streams', 'Swamps', 'Tidal Rivers'))
+       
+      
+
+                     
