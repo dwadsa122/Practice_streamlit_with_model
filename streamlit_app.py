@@ -25,6 +25,7 @@ with st.expander("Data"):
 with st.expander("Data Visualizations"):
   
   fig, ax = plt.subplots(figsize=(10, 10))
+  plt.title("Length to weight ratio")
   sns.scatterplot(data = df1, x = 'Observed Length (m)', y = 'Observed Weight (kg)',hue = 'Common Name')
   plt.legend()
   st.pyplot(fig)
