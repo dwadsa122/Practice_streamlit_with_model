@@ -22,4 +22,6 @@ with st.expander("Data"):
   y
 
 with st.expander("Data Visualizations"):
-  plt.scatter(data = df1, x = 'Observed Length (m)', y = 'Observed Weight (kg)', color = 'Common Name')
+  plt.figure(figsize = (10,10))
+  sns.scatterplot(data = df2, x = 'Observed Length (m)', y = 'Observed Weight (kg)',hue = 'Common Name')
+  plt.legend()
