@@ -76,11 +76,11 @@ with st.sidebar:
           'Habitat': Habitat}
   input_df = pd.DataFrame(data = data, index = [0])
   input_croc = pd.concat([input_df, X], axis = 0 )
-  with st.expander('Input Features Dataframe'):
-    st.write("Here are the your input features")
-    input_df
-    st.write("Concatenated with the dataframe!")
-    input_croc
+with st.expander('Input Features Dataframe'):
+  st.write("Here are the your input features")
+  input_df
+  st.write("Concatenated with the dataframe!")
+  input_croc
 
 # Process Data
   from sklearn.preprocessing import LabelEncoder
