@@ -52,7 +52,7 @@ with st.sidebar:
        'Senegal', 'Sierra Leone', 'South Africa', 'Sri Lanka', 'Sudan',
        'Tanzania', 'Thailand', 'USA (Florida)', 'Uganda', 'Venezuela',
        'Vietnam'))
-  Habitat = st.selectbox('Describe it's Habitat', ('Billabongs', 'Brackish Rivers', 'Coastal Lagoons',
+  Habitat = st.selectbox('Describe its Habitat', ('Billabongs', 'Brackish Rivers', 'Coastal Lagoons',
        'Coastal Wetlands', 'Estuaries', 'Estuarine Systems',
        'Flooded Savannas', 'Forest Rivers', 'Forest Swamps',
        'Freshwater Marshes', 'Freshwater Rivers', 'Freshwater Wetlands',
