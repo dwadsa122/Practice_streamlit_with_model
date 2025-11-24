@@ -10,6 +10,7 @@ st.write('This is my attempt to create a streamlit app with a machine learning m
 with st.expander("Data"):
   st.write('**Raw Data**')
   df = pd.read_csv("crocodile_dataset.csv")
-  df
-  st.write("It is important to note that there are various classifications in the common name column")
+  st.write("It is important to note that there are various classifications in the common name column, lets remove some columns that seem to be unnecessary, and we'll only keep those that we need.")
+  df_new = df.drop(columns = df[['Observation ID','Scientific Name','Genus','Genus','Conservation Status', 'Observer Name', 'Notes','Family']])
+  df_new
   
