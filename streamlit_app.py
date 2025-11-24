@@ -11,5 +11,5 @@ with st.expander("Data"):
   st.write('**Raw Data**')
   df = pd.read_csv("crocodile_dataset.csv")
   df
-  st.write("It is important to note that there are various classifications in the "common name" column")
+  st.write("It is important to note that there are various classifications in the common name column")
   
