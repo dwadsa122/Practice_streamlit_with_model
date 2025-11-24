@@ -10,7 +10,7 @@ st.write('This is my attempt to create a streamlit app with a machine learning m
 st.markdown("""
 <style>
 div.streamlit-expander {
-    width: 900px !important;
+    width: 1200px !important;
 }
 </style>
 """, unsafe_allow_html=True)
