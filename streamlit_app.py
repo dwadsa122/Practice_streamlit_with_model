@@ -20,3 +20,6 @@ with st.expander("Data"):
   st.write("And here shall be our class target")
   y = df['Common Name']
   y
+
+with st.expander("Data Visualizations"):
+  st.scatter_chart(data = df1, x = 'Observed Length (m)', y = 'Observed Weight (kg)', color = 'Common Name')
