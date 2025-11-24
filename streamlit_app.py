@@ -23,7 +23,8 @@ with st.expander("Data"):
   y
 
 with st.expander("Data Visualizations"):
-  plt.figure(figsize = (10,10))
+  
+  fig, ax = plt.subplots(figsize=(10, 7))
   sns.scatterplot(data = df1, x = 'Observed Length (m)', y = 'Observed Weight (kg)',hue = 'Common Name')
   plt.legend()
-  plt.show()
+  st.pyplot(fig)
