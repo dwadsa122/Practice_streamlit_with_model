@@ -4,15 +4,19 @@ import pandas as pd
 import matplotlib.pyplot as plt
 import seaborn as sns
 
+#Title setting
 st.title('Practice Tool (Streamlit with machine learning')
 
 
+#Display the Data
 with st.expander("Data"):
   st.write('**Raw Data**')
-  
+
+  # Load the Data and drop unnecessary columns
   df = pd.read_csv("crocodile_dataset.csv")
   df1 = df.drop(columns = df[['Observation ID','Scientific Name','Genus','Genus','Conservation Status', 'Observer Name', 'Notes','Family','Date of Observation']])
-  
+
+  # Create the raw X and Y Values
   st.write("It is important to note that there are various classifications in the common name column, lets remove some columns that seem to be unnecessary, and we'll only keep those that we need.")
   st.write("Below shall be the X values with all of its features")
   X = df.drop(columns = df[['Observation ID','Scientific Name','Genus','Genus','Conservation Status', 'Observer Name', 'Notes','Family','Date of Observation', 'Common Name']])
@@ -22,6 +26,7 @@ with st.expander("Data"):
   y = df['Common Name']
   y
 
+# Setup visualizations
 with st.expander("Data Visualizations"):
   df3 = df1[df1['Age Class'] == 'Adult']
   len(df3)
@@ -35,6 +40,7 @@ with st.expander("Data Visualizations"):
   plt.legend()
   st.pyplot(fig)
 
+# Setup Input Features
 with st.sidebar:
   st.header("Input Features")
   observed_length = st.slider('Observed length (m)', 0.14,6.12)
@@ -60,6 +66,16 @@ with st.sidebar:
        'Marshes', 'Oases', 'Oxbow Lakes', 'Ponds', 'Reservoirs', 'Rivers',
        'Shaded Forest Rivers', 'Slow Rivers', 'Slow Streams',
        'Small Streams', 'Swamps', 'Tidal Rivers'))
+
+# Create dataframe from input features
+  data = {'Observed_Length (m)': observed_length,
+          'Observed_Weight (kg)': observed_weight,
+          'Age_Class': Age_class,
+          'Sex': Sex,
+          'Country/Region': Region,
+          'Habitat': Habitat}
+  input_df = pd.DataFrame(data = data, index = [0])
+  input_croc = pd.concat([input_df, X], axis = 0 ]
        
       
 
