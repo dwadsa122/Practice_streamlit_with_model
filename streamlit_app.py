@@ -5,20 +5,11 @@ import matplotlib.pyplot as plt
 
 st.title('Practice Tool (Streamlit with machine learning')
 
-st.write('This is my attempt to create a streamlit app with a machine learning model inside.')
-
-st.markdown("""
-<style>
-div.streamlit-expander {
-    width: 1200px !important;
-}
-</style>
-""", unsafe_allow_html=True)
 
 with st.expander("Data"):
   st.write('**Raw Data**')
   df = pd.read_csv("crocodile_dataset.csv")
   st.write("It is important to note that there are various classifications in the common name column, lets remove some columns that seem to be unnecessary, and we'll only keep those that we need.")
-  df_new = df.drop(columns = df[['Observation ID','Scientific Name','Genus','Genus','Conservation Status', 'Observer Name', 'Notes','Family']])
+  df_new = df.drop(columns = df[['Observation ID','Scientific Name','Genus','Genus','Conservation Status', 'Observer Name', 'Notes','Family','Date of Observation']])
   df_new
   
