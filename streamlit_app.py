@@ -107,8 +107,8 @@ column_config = {
         max_value=1
     ) for cls in classes
 }
-st.dataframe(df_prob,column_config = column_config)
-max_class = df_prob.idxmax()
+st.dataframe(df_prob)
+max_class = df_prob['Probability'].idxmax()
 st.success(f"Predicted class: {max_class}")
 
 
