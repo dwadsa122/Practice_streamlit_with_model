@@ -108,7 +108,7 @@ column_config = {
     ) for cls in classes
 }
 st.dataframe(df_prob,column_config = column_config, hide_index = True)
-max_class = df_prob.idxmax(axis=1).values[0]
+max_class = df_prob.idxmax()
 st.success(f"Predicted class: {max_class}")
 
 
