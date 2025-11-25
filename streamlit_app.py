@@ -82,10 +82,16 @@ with st.expander('Input Features Dataframe'):
   st.write("Concatenated with the dataframe!")
   input_croc
 
-# Process Data
-  from sklearn.preprocessing import LabelEncoder
-  # Utilize LabelEncoder as the categorical columns are a bit too many
-  le = LabelEncoder()
+
+st.subheader("Modeling"):
+st.write("We shall use CatBoosting for our modeling to compensate with the multiclass target that we have")
+st.write("I have already made the model in a jupyter notebook and saved it here in the repository")
+from catboost import CatBoostClassifier
+
+model = CatBoostClassifier()
+model.load_model("crocodile_model.cbm")
+
+ 
   
   
        
