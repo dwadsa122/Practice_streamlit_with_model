@@ -98,7 +98,7 @@ pred_proba = model.predict_proba(input_row)[0]
 classes = model.classes_
 
 df_prob = pd.DataFrame({"Classes": classes, "Probability": pred_proba}).set_index("Class")
-st.dataframe(df_prob)
+print(df_prob.columns)
 
 
 
