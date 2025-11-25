@@ -94,13 +94,12 @@ model.load_model("crocodile_model.cbm")
 input_row = input_croc[1:]
 
 prediction = model.predict(input_row)
-pred_proba = model.predict_proba(input_row)
+pred_proba = model.predict_proba(input_row)[0]
 classes = model.classes_
 
-df_prob = pd.DataFrame(pred_proba, columns = classes)
-df_portrait = df_prob.T
-df_portrait.columns = df['Probability']
-st.dataframe(df_portrait)
+df_prob = pd.DataFrame({"Classes": classes, "Probability": pred_proba}).set_index("Class")
+st.dataframe(df_prob)
+
 
 
 
