@@ -91,7 +91,7 @@ from catboost import CatBoostClassifier
 model = CatBoostClassifier()
 model.load_model("crocodile_model.cbm")
 
-input_row = input_croc[1:]
+input_row = input_croc[0:]
 
 prediction = model.predict(input_row)
 pred_proba = model.predict_proba(input_row)[0]
