@@ -83,7 +83,7 @@ with st.expander('Input Features Dataframe'):
   input_croc
 
 
-st.subheader("Modeling"):
+st.subheader("Modeling")
 st.write("We shall use CatBoosting for our modeling to compensate with the multiclass target that we have")
 st.write("I have already made the model in a jupyter notebook and saved it here in the repository")
 from catboost import CatBoostClassifier
