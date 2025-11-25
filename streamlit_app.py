@@ -94,7 +94,7 @@ model.load_model("crocodile_model.cbm")
 input_row = input_croc[1:]
 
 prediction = model.predict(input_row)
-pred_proba = model.predict_proba(input_row)[0]
+pred_proba = model.predict_proba(input_row)
 classes = model.classes_
 
 df_prob = pd.DataFrame(pred_proba, columns = classes)
