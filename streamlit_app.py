@@ -98,7 +98,18 @@ pred_proba = model.predict_proba(input_row)[0]
 classes = model.classes_
 
 df_prob = pd.DataFrame({"Classes": classes, "Probability": pred_proba}).set_index("Classes")
-st.dataframe(df_prob)
+column_config = {
+    cls: st.column_config.ProgressColumn(
+        cls,
+        format='%f',
+        width='medium',
+        min_value=0,
+        max_value=1
+    ) for cls in classes
+}
+st.dataframe(df_prob,column_config = column_config, hide_index = True)
+max_class = df_prob.idxmax(axis=1).values[0]
+st.success(f"Predicted class: {max_class}")
 
 
 
