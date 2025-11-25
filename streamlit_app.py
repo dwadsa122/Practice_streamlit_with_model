@@ -100,7 +100,7 @@ classes = model.classes_
 df_prob = pd.DataFrame(pred_proba, columns = classes)
 df_portrait = df_prob.T
 df_portrait.columns = df['Probability']
-df_portrait
+st.dataframe(df_portrait)
 
 
 
